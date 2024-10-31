@@ -172,11 +172,7 @@ def registrar_cliente(request):
         form = ClienteForm()
     return render(request, 'registrar_cliente.html', {'form': form})
 # LOGIN DE LOS ACTORES
-<<<<<<< HEAD
 @staff_member_required
-=======
-@csrf_exempt
->>>>>>> ea592f2bc55f7c366c0d0916e68aa7dfeb847aee
 def registro_actores(request):
     if request.method == 'POST':
         tipo_actor = request.POST.get('tipo_actor')  # Obtener el tipo de actor seleccionado
