@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <title>Información de Pallet</title>
+    {% include 'navbar.html' %}
 </head>
 <body>
 
 <div class="container">
     <h1>Gestión de Pallets</h1>
-    <a href="{% url 'dashboard_predio' %}" class="btn-home">Inicio</a>
     
     <form method="get" action="{% url 'pallet_view' %}" class="form-select">
         <label for="pallet_select">Selecciona un Pallet:</label>

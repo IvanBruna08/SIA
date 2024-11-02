@@ -13,29 +13,7 @@
     
 </head>
 <body>
-    <nav class="barrita">
-        <a class="menu" href="#">Menú de Opciones</a>
-        <ul>
-            <li>
-                <a id="connectButton" class="btn-metamask" href="#">Conectar MetaMask</a>
-            </li>
-            <li>
-                <a href="{% url 'registrar_pallet' %}" class="nav-link">Registrar Pallet</a>
-            </li>
-            <li>
-                <a href="{% url 'distribuir_pallet' %}" class="nav-link">Distribuir Pallet</a>
-            </li>
-            <li>
-                <a href="{% url 'pallet_view' %}" class="nav-link">Ver Pallet</a>
-            </li>
-            <li>
-                <a href="{% url 'actualizar_pallet' %}" class="nav-link">Actualizar</a>
-            </li>
-            <li>
-                <a href="{% url 'custom_logout' %}" class="btn-barrita">Salir</a>
-            </li>
-        </ul>
-    </nav>
+    {% include 'navbar.html' %}
     
     <h1>Predio - Funciones del Trabajador: {{ user_type }}</h1>
     <div>

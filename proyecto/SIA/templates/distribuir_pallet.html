@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% include 'navbar.html' %}
 </head>
 <body>
-    <!-- Botón "Inicio" flotante -->
-    <a href="{% url 'dashboard_predio' %}" class="btn-home">Inicio</a>
 
     <div class="contenedor-dist">
         <h1>Distribuir Pallet</h1>
