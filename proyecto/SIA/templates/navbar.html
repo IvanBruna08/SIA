@@ -14,7 +14,7 @@
             <li>
                 <a href="{% url 'pallet_view' %}" class="nav-link {% if request.resolver_match.url_name == 'pallet_view' %}active{% endif %}">Ver Pallet</a>
             </li>
-            <li>
+            <li> 
                 <a href="{% url 'actualizar_pallet' %}" class="nav-link {% if request.resolver_match.url_name == 'actualizar_pallet' %}active{% endif %}">Actualizar</a>
             </li>
             <li>
@@ -25,6 +25,14 @@
 </header>
 
 <style>
+
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+    }
     .barrita {
         background-color: rgba(109, 76, 65, 0.8); 
         padding: 15px; 
@@ -121,4 +129,5 @@
     background-color: rgba(109, 76, 65);
     box-shadow: 0px 0px 10px rgba(109, 76, 65, 0.5); /* Sombra verde */
 }
+
 </style>

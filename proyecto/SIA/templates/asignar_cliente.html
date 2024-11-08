@@ -1,6 +1,6 @@
 {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Asegúrate de tener el archivo CSS -->
-    <a href="{% url 'dashboard_distribuidor' %}" class="btn-home">Inicio</a>
+    <a href="{% url 'dashboard_distribuidor' %}" class="btn-home">Atrás</a>
 <form method="post">
     {% csrf_token %}
     <h3>Seleccionar Cajas</h3>
@@ -21,7 +21,7 @@
         {% endfor %}
     </select>
 
-    <button type="submit" class="btn btn-primary">Asignar Cliente</button>
+    <button type="submit" class="btn-submit">Asignar Cliente</button>
 
     {% if errores %}
         <div class="alert alert-danger">

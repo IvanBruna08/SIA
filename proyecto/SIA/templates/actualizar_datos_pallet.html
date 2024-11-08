@@ -60,6 +60,8 @@
     </script>
 </head>
 <body>
+    <a class="btn-home" href="{% url 'actualizar_pallet' %}">Atrás</a>
+
     <h2>Actualizar Datos del Pallet: {{ pallet.producto }}</h2>
 
     <form method="POST" onsubmit="return validatePeso();">
@@ -83,9 +85,8 @@
             {% endfor %}
         </table>
 
-        <h3>Opciones</h3>
-        <button type="button" id="actualizarPesoBtn" onclick="togglePeso()">Actualizar Peso</button>
-        <button type="submit">Guardar Cambios</button>
+        <button type="button" id="actualizarPesoBtn" onclick="togglePeso()" class="btn-submit">Actualizar Peso</button>
+        <button type="submit" class="btn-submit">Guardar Cambios</button>
     </form>
 
     {% if messages %}

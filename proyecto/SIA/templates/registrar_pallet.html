@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    {% include 'navbar.html' %}
-</head>
-<body>
+{% block title %}Crear Pallet{% endblock %}
+
+{% block content %}
+<div class="contenedor-dist">
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn-submit">Crear Pallet</button>
     </form>
-</body>
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const productoField = document.querySelector('#id_producto');
@@ -50,6 +49,4 @@
         productoField.addEventListener('change', actualizarClasificacion);
     });
 </script>
-</html>
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}

@@ -8,23 +8,13 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+    <a href="{% url 'custom_logout' %}" class="btn-home">Salir</a>
         <h1 >Bienvenido, {{ nombre_usuario }}</h1>
-    <div class="contenedor-lista-d">
-        <ul>
-            <li><a class="lista-d">Historial Pagos</a></li>
-            <li><button id="connectButton" class="btn btn-primary">Conectar MetaMask</button></li> 
-        </ul>
-
-        <main class="main-container-cosecha" id="contenido">
-            {% block content %}
-            <!-- Este bloque se sobrescribirá en plantillas hijas -->
-            {% endblock %}
-        </main>
+    <div class="info-cont">
+        <a class="lista-d">Historial Pagos</a>
+        <button id="connectButton" class="btn-metamask">Conectar MetaMask</button>
+        <p class="connect" id="walletAddress">No conectado</p>
     </div>
-    <div class="contenedor-lista-d">
-        <p id="walletAddress">No conectado</p>
-    </div>
-    <a href="{% url 'custom_logout' %}" class="btn-logout">Salir</a>
 
     <!-- Scripts de Bootstrap y MetaMask -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

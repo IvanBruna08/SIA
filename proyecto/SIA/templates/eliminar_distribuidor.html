@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <a class="btn-home" href="{% url 'actualizar_pallet' %}">Atrás</a>
     <div class="container">
         <h1>Eliminar Distribuidores para el Pallet {{ pallet.id }}</h1>
         <h2>Pallet: {{ pallet.nombre }} - Peso: {{ pallet.peso }} kg</h2>

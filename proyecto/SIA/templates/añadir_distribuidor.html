@@ -1,5 +1,7 @@
 {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Asegúrate de tener el archivo CSS -->
+<body>
+    <a class="btn-home" href="{% url 'actualizar_pallet' %}">Atrás</a>
 <form method="post" action="{% url 'añadir_distribuidor' pallet.id %}">
     {% csrf_token %}
     <h2>Añadir Distribuidor para el Pallet</h2>
@@ -40,5 +42,6 @@
         </div>
     {% endif %}
 
-    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <button type="submit" class="btn-submit">Guardar Cambios</button>
 </form>
+</body>

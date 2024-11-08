@@ -15,82 +15,19 @@
     <nav class="navbar">
         <div class="navbar-container">
             <h1>Bienvenido, {{ nombre_usuario }}</h1>
-            <a href="{% url 'custom_logout' %}" class="btn-logout">Salir</a>
+            <a href="{% url 'custom_logout' %}" class="btn-home">Salir</a>
         </div>
     </nav>
 
     <!-- Contenido principal de la página -->
     <div class="main-content">
-        <section class="intro-section-cosecha">
+        <section class="info-cont">
             <h3>Sistema para Registro y Trazabilidad de Productos Agrícolas</h3>
             <p>Por favor, espere el Pallet o Caja que transportará.</p>
-            <button id="connectButton" class="btn btn-primary">Conectar MetaMask</button>
-            <p id="walletAddress">No conectado</p>
+            <button id="connectButton" class="btn-metamask">Conectar MetaMask</button>
+            <p class="connect" id="walletAddress">No conectado</p>
         </section>
     </div>
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url('/static/css/ag1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            color: #2E7D32; /* Verde oscuro */
-            justify-content: center; 
-            align-items: center; 
-        }
-        .btn-logout {
-            position: absolute; 
-            top: 20px; 
-            left: 20px;
-            background-color: #A1887F; 
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            transition: background-color 0.3s;
-            z-index: 1000; 
-        }
-        .btn-logout:hover {
-            background-color: rgba(109, 76, 65); /* Café medio */
-        }
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            color: #359738;
-            text-align: center;
-            background-color: rgba(255,255,255, 0.4);
-            border-radius: 15px;
-            padding: 10px;   
-        }
-        .intro-section-cosecha h3 {
-            font-size: 1.8em;
-            font-weight: 700;
-            background-color: rgba(255,255,255, 0.4);
-            color: #2E7D32;
-            text-align: center;
-            border-radius: 15px;
-            padding: 10px; 
-        }
-        .intro-section-cosecha p {
-            font-size: 16px;
-            margin-bottom: 20px;
-            background-color: rgba(255,255,255, 0.4);
-            color: black;
-            text-align: center;
-            border-radius: 15px;
-            padding: 10px 20px; 
-        }
-    </style>
-
 </body>
 
 <!-- Scripts de Bootstrap y MetaMask -->

@@ -13,23 +13,16 @@
     
 </head>
 <body>
-    {% include 'navbar.html' %}
+    {% include 'navbar.html' %} 
     
     <h1>Predio - Funciones del Trabajador: {{ user_type }}</h1>
-    <div>
-        <p id="walletAddress">No conectado</p>
-    </div>
-
-    <!-- Contenido principal -->
-    <div class="content">
-        {% block content %}
+<div class="info-cont">
+        <p class="connect" id="walletAddress">No conectado</p>
         <section class="intro-section-cosecha">
             <h3>Sistema para Registro y Trazabilidad de Cosecha</h3>
             <p>Utilice las funciones en el menú superior para registrar, consultar y verificar el estado de los pallets. Aquí se mostrará la información relacionada con los procesos que realice.</p>
         </section>
-        {% endblock %}
-    </div>
-
+</div>
     <!-- Scripts de Bootstrap y MetaMask -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
